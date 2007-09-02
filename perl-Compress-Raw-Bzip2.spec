@@ -1,6 +1,6 @@
 %define	module	Compress-Raw-Bzip2
 %define	name	perl-%{module}
-%define	version	2.005
+%define	version	2.006
 %define	release	%mkrel 1
 
 Name:		%{name}
