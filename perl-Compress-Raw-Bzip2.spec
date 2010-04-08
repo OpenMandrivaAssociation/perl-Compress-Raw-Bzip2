@@ -1,5 +1,5 @@
 %define	upstream_name	 Compress-Raw-Bzip2
-%define upstream_version 2.025
+%define upstream_version 2.026
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
