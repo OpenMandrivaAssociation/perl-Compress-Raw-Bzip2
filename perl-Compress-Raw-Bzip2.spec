@@ -1,9 +1,9 @@
 %define	upstream_name	 Compress-Raw-Bzip2
-%define upstream_version 2.030
+%define upstream_version 2.031
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	Low-Level Interface to bzip2 compression library
 License:	GPL+ or Artistic
