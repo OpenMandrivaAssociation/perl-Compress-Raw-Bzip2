@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Low-Level Interface to bzip2 compression library
 License:	GPL+ or Artistic
@@ -34,10 +34,11 @@ rm -rf %{buildroot}
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+rm -f %{buildroot}%{_mandir}/man3/Compress::Raw::Bzip2.3pm*
+
 
 %files
 %defattr(-,root,root)
 %doc README Changes
-%{_mandir}/*/*
 %{perl_vendorarch}/Compress
 %{perl_vendorarch}/auto/Compress
