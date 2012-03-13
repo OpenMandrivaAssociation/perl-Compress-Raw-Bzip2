@@ -1,9 +1,9 @@
-%define	upstream_name	 Compress-Raw-Bzip2
-%define upstream_version 2.037
+%define	upstream_name		Compress-Raw-Bzip2
+%define	upstream_version	2.037
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	4
 
 Summary:	Low-Level Interface to bzip2 compression library
 License:	GPL+ or Artistic
@@ -13,7 +13,6 @@ Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{upstream_name}-%{ups
 
 BuildRequires:	bzip2-devel
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Low-Level Interface to bzip2 compression library.
@@ -22,21 +21,16 @@ Low-Level Interface to bzip2 compression library.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-%{__make} test
-
-%clean 
-rm -rf %{buildroot}
+make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{perl_vendorarch}/Compress
 %{perl_vendorarch}/auto/Compress
