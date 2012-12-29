@@ -21,7 +21,7 @@ Low-Level Interface to bzip2 compression library.
 %setup -q -n %{modname}-%{modver}
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
+BUILD_BZIP2=0 perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -38,6 +38,7 @@ make test
 
 %changelog
 * Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.59.0-1
+- build against system libbz2
 - cleanups
 - new version
 
