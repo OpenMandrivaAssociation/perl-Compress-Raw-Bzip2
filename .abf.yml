@@ -1,3 +1,5 @@
-sources:
+removed_sources:
   Compress-Raw-Bzip2-2.059.tar.gz: 076f89f65ce901481b4de25d6d87250f1ad5f301
   Compress-Raw-Bzip2-2.060.tar.gz: 1281d2a4f07f0fc6f439e2a22a6788dcf6529a9a
+sources:
+  Compress-Raw-Bzip2-2.062.tar.gz: a0debfd5504243ce18c84518318a4a4439a7454b
