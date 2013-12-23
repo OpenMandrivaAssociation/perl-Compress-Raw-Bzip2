@@ -1,14 +1,14 @@
 %define	modname	Compress-Raw-Bzip2
-%define	modver	2.062
+%define	upstream_version 2.063
 
 Summary:	Low-Level Interface to bzip2 compression library
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	5
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{modname}-%{modver}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{modname}-%{upstream_version}.tar.gz
 BuildRequires:	bzip2-devel
 BuildRequires:	perl-devel
 
@@ -16,7 +16,7 @@ BuildRequires:	perl-devel
 Low-Level Interface to bzip2 compression library.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{upstream_version}
 
 %build
 BUILD_BZIP2=0 perl Makefile.PL INSTALLDIRS=vendor
