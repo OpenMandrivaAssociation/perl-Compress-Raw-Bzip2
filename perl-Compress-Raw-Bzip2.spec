@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %define	modname	Compress-Raw-Bzip2
 %define upstream_version 2.204
 
