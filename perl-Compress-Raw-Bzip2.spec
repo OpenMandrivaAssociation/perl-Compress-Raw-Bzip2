@@ -1,5 +1,5 @@
 %define	modname	Compress-Raw-Bzip2
-%define upstream_version 2.100
+%define upstream_version 2.204
 
 Summary:	Low-Level Interface to bzip2 compression library
 Name:		perl-%{modname}
